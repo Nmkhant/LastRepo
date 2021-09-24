@@ -13,7 +13,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
 import altair as alt
-nltl.download('stopwords')
+nltk.download('stopwords')
 
 lemmatizer=WordNetLemmatizer()
 stemming = PorterStemmer()
