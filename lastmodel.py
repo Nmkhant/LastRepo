@@ -15,7 +15,7 @@ import re
 import altair as alt
 nltk.download('stopwords')
 nltk.download('punkt')
-nltk.downloas('wordnet')
+nltk.download('wordnet')
 
 lemmatizer=WordNetLemmatizer()
 stemming = PorterStemmer()
