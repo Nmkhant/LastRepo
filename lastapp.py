@@ -30,7 +30,10 @@ if choice == "Home": #Home
     st.text("")
     
     user_review = st.text_input('Enter The Comment You Want To Test')
-
+    
+    if user_review == False:
+        st.waring('Please Enter A Comment.')
+      
     if st.button("Analyze"):
         prediction = lastmodel.testing(user_review)
         if prediction == 0:
