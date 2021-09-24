@@ -123,10 +123,10 @@ nb=MultinomialNB()
 nb.fit(Train_X_Tfidf,y_train)
 nb_pred = nb.predict(Test_X_Tfidf)
 
-#from xgboost import XGBClassifier
-#xgb = XGBClassifier(random_state=29,learning_rate=0.7)
-#xgb.fit(Train_X_Tfidf, y_train)
-#xgb_pred = xgb.predict(Test_X_Tfidf)
+from xgboost import XGBClassifier
+xgb = XGBClassifier(random_state=29,learning_rate=0.7)
+xgb.fit(Train_X_Tfidf, y_train)
+xgb_pred = xgb.predict(Test_X_Tfidf)
 
 from sklearn.tree import DecisionTreeClassifier
 dct = DecisionTreeClassifier(criterion='entropy', random_state=1)
@@ -140,10 +140,10 @@ nb_Precision_Macro_Score = precision_score(y_test, nb_pred,average = 'macro')*10
 nb_Recall_Score = recall_score(y_test, nb_pred, average = 'macro')*100
 nb_F1_score =f1_score(y_test, nb_pred)*100
 
-#xgb_accuracy = accuracy_score(y_test, xgb_pred)*100
-#xgb_Precision_Macro_Score = precision_score(y_test, xgb_pred,average = 'macro')*100
-#xgb_Recall_Score = recall_score(y_test, xgb_pred, average = 'macro')*100
-#xgb_F1_score =f1_score(y_test, xgb_pred)*100
+xgb_accuracy = accuracy_score(y_test, xgb_pred)*100
+xgb_Precision_Macro_Score = precision_score(y_test, xgb_pred,average = 'macro')*100
+xgb_Recall_Score = recall_score(y_test, xgb_pred, average = 'macro')*100
+xgb_F1_score =f1_score(y_test, xgb_pred)*100
     
 dct_accuracy = accuracy_score(y_test, dct_pred)*100
 dct_Precision_Macro_Score = precision_score(y_test, dct_pred,average = 'macro')*100
@@ -176,23 +176,23 @@ b = alt.Chart(df_hashtag_negative).mark_bar(opacity=1).encode(
 y='Negative-Hashtags', x='Count')
 
 df_f1score = pd.DataFrame({
-    'Model': ['Naive Baye', 'Decision Tree'],
-    'F1score': [nb_F1_score , dct_F1_score] 
+    'Model': ['Naive Baye', 'Decision Tree' , 'XGBClassifier'],
+    'F1score': [nb_F1_score , dct_F1_score , xgb_F1_score ] 
     })
 
 df_accuracy = pd.DataFrame({
-    'Model': ['Naive Baye', 'Decision Tree'],
-    'Accuracy': [nb_accuracy, dct_accuracy]
+    'Model': ['Naive Baye', 'Decision Tree', 'XGBClassifier'],
+    'Accuracy': [nb_accuracy, dct_accuracy , xgb_accuracy]
     })
 
 df_precision = pd.DataFrame({
-    'Model': ['Naive Baye', 'Decision Tree'],
-    'Precision Macro Score': [nb_Precision_Macro_Score, dct_Precision_Macro_Score]
+    'Model': ['Naive Baye', 'Decision Tree' , 'XGBClassifier'],
+    'Precision Macro Score': [nb_Precision_Macro_Score, dct_Precision_Macro_Score , xgb_Precision_Macro_Score]
     })
 
 df_recall  = pd.DataFrame({
-    'Model': ['Naive Baye', 'Decision Tree'],
-    'Recall Score': [nb_Recall_Score, dct_Recall_Score]
+    'Model': ['Naive Baye', 'Decision Tree' , 'XGBClassifier'],
+    'Recall Score': [nb_Recall_Score, dct_Recall_Score, xgb_Recall_Score]
     })
 
 f1 = alt.Chart(df_f1score).mark_bar(opacity=1).encode(
