@@ -19,7 +19,7 @@ lemmatizer=WordNetLemmatizer()
 stemming = PorterStemmer()
 stops = set(stopwords.words("english"))
 
-train_data = pd.read_csv("E:/AI Project (9-2021)/Twitter_Sentiment_Analysis/train.csv")
+train_data = pd.read_csv("train.csv")
 
 train_original = train_data.copy()
 
