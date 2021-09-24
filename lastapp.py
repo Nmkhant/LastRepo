@@ -31,15 +31,16 @@ if choice == "Home": #Home
     
     user_review = st.text_input('Enter The Comment You Want To Test')
          
-    if st.button("Analyze") and len(user_review) != 0:
-        prediction = lastmodel.testing(user_review)
-        if prediction == 0:
-            st.success('Your comment is a positive comment. Racism and Sexism should not be in the world.You are great!')
-        elif prediction == 1:
-            st.error('Your comment is a negative comment. The day you stop blaming others is the day you begin to discover who you truely are.')
+    if st.button("Analyze"):
+        if len(user_review) != 0:
+            prediction = lastmodel.testing(user_review)
+            if prediction == 0:
+                st.success('Your comment is a positive comment. Racism and Sexism should not be in the world.You are great!')
+            elif prediction == 1:
+                st.error('Your comment is a negative comment. The day you stop blaming others is the day you begin to discover who you truely are.')
     
-    elif st.button("Analyze") and len(user_review) == 0:
-         st.warning('Please Enter A Comment.')
+        elif  len(user_review) == 0:
+            st.warning('Please Enter A Comment.')
    
 elif choice == "About Us":
     
