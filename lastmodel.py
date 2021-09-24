@@ -176,23 +176,23 @@ b = alt.Chart(df_hashtag_negative).mark_bar(opacity=1).encode(
 y='Negative-Hashtags', x='Count')
 
 df_f1score = pd.DataFrame({
-    'Model': ['Naive Baye', 'Decision Tree' ],
-    'F1score': [nb_F1_score , dct_F1_score ] 
+    'Model': ['Naive Baye', 'Decision Tree', 'XGBClassifier'],
+    'F1score': [nb_F1_score , dct_F1_score, 54.3123543123543 ] 
     })
 
 df_accuracy = pd.DataFrame({
-    'Model': ['Naive Baye', 'Decision Tree'],
-    'Accuracy': [nb_accuracy, dct_accuracy ]
+    'Model': ['Naive Baye', 'Decision Tree', 'XGBClassifier'],
+    'Accuracy': [nb_accuracy, dct_accuracy ,95.09448129145288]
     })
 
 df_precision = pd.DataFrame({
-    'Model': ['Naive Baye', 'Decision Tree' ],
-    'Precision Macro Score': [nb_Precision_Macro_Score, dct_Precision_Macro_Score ]
+    'Model': ['Naive Baye', 'Decision Tree', 'XGBClassifier' ],
+    'Precision Macro Score': [nb_Precision_Macro_Score, dct_Precision_Macro_Score ,86.84412593895061]
     })
 
 df_recall  = pd.DataFrame({
-    'Model': ['Naive Baye', 'Decision Tree' ],
-    'Recall Score': [nb_Recall_Score, dct_Recall_Score]
+    'Model': ['Naive Baye', 'Decision Tree', 'XGBClassifier' ],
+    'Recall Score': [nb_Recall_Score, dct_Recall_Score, 70.39676128562652]
     })
 
 f1 = alt.Chart(df_f1score).mark_bar(opacity=1).encode(
