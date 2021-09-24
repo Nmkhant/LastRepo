@@ -13,7 +13,7 @@ import re
 import pickle
 import lastmodel
 
-#st.sidebar.image("Image/Team_Logo1.JPG" , width=300 , caption='Team TRIO')
+st.sidebar.image("Team_Logo1.JPG" , width=300 , caption='Team TRIO')
 
 menu = ["Home" , "Data Visualization" ,"About Us"]
 
@@ -25,7 +25,7 @@ if choice == "Home": #Home
     
     st.text("")
     
-    #st.image("Image/Body.jpg" , width = 700)
+    st.image("Body.jpg" , width = 700)
     
     st.text("")
     
@@ -46,13 +46,13 @@ elif choice == "About Us":
     st.text("")
     
     col1 , col2 , col3 = st.columns(3)
-    #col1.image('Image/hhm.png', width = 200)
+    col1.image('hhm.png', width = 200)
     col1.write("<p style = 'text-align: left; font-size:110%; color:#1DA1F2'></p>", unsafe_allow_html = True)
     
-    #col2.image('Image/nmk.png', width = 200)
+    col2.image('nmk.png', width = 200)
     col2.write("<p style = 'text-align: left; font-size:110%; color:#1DA1F2'>I am Nyi Min Khant. I am a student from UTYCC. I made the User Interface of this software.</p>", unsafe_allow_html = True)
     
-    #col3.image('Image/tyn.png', width = 200)  
+    col3.image('tyn.png', width = 200)  
     col3.write("<p style = 'text-align: left; font-size:110%; color:#1DA1F2'></p>", unsafe_allow_html = True)
 
 
