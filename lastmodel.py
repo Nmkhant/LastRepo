@@ -138,11 +138,11 @@ df_hashtag_positive = pd.DataFrame({
     'Count': df_positive_plot['Count']
      })
 a = alt.Chart(df_hashtag_positive).mark_bar(opacity=1).encode(
-x='Positive-Hashtags', y='Count')
+y='Positive-Hashtags', x='Count')
 
 df_hashtag_negative = pd.DataFrame({
     'Negative-Hashtags': df_negative_plot['Hashtags'],
     'Count': df_negative_plot['Count']
      })
 b = alt.Chart(df_hashtag_negative).mark_bar(opacity=1).encode(
-x='Negative-Hashtags', y='Count')
+y='Negative-Hashtags', x='Count')
