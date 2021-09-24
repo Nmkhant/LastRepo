@@ -58,11 +58,13 @@ elif choice == "About Us":
 
 elif choice == "Data Visualization":
     
-    column1 , column2 = st.columns([1,3])
-
-    if column1.button("20 Most Common Positive-Hashtags Words"):
-        column2.altair_chart(lastmodel.a, use_container_width=True) 
+    visualization_menu = ["Model Comparison" , "20 Most Common Positive-Hashtags Words", "20 Most Common Negative-Hashtags Words",]
+    
+    choice1 = st.selectbox("Model Comparison" , visualization_menu )
+   
+    if choice1 == "20 Most Common Positive-Hashtags Words":
+        st.altair_chart(lastmodel.a, use_container_width=True) 
         
-    if column1.button("20 Most Common Negative-Hashtags Words"):
-        column2.altair_chart(lastmodel.b, use_container_width=True)
+    if choice1 == "20 Most Common Negative-Hashtags Words":
+       st.altair_chart(lastmodel.b, use_container_width=True)
 
