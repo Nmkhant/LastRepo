@@ -50,7 +50,7 @@ elif choice == "About Us":
     
     col1 , col2 , col3 = st.columns(3)
     col1.image('hhm.png', width = 200)
-    col1.write("<p style = 'text-align: left; font-size:110%; color:#1DA1F2'></p>", unsafe_allow_html = True)
+    col1.write("<p style = 'text-align: left; font-size:110%; color:#1DA1F2'>I am htet htet mon.I am responsible for the backend system of this project.</p>", unsafe_allow_html = True)
     
     col2.image('nmk.png', width = 200)
     col2.write("<p style = 'text-align: left; font-size:110%; color:#1DA1F2'>I am Nyi Min Khant. I am a student from UTYCC. I made the User Interface of this software.</p>", unsafe_allow_html = True)
@@ -89,13 +89,13 @@ elif choice == "Data Visualization":
      
         
         if F1score:
-            column1.altair_chart(lastmodel.f1,  use_container_width=False) 
+            st.altair_chart(lastmodel.f1,  use_container_width=False) 
             
         if Accuracy:
-            column2.altair_chart(lastmodel.acc,  use_container_width=False) 
+            st.altair_chart(lastmodel.acc,  use_container_width=False) 
             
         if Precision:
-            column3.altair_chart(lastmodel.pre,   use_container_width=False) 
+            st.altair_chart(lastmodel.pre,   use_container_width=False) 
             
         if Recall:
-            column4.altair_chart(lastmodel.recall,  use_container_width=False) 
+            st.altair_chart(lastmodel.recall,  use_container_width=False) 
