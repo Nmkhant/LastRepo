@@ -89,13 +89,13 @@ elif choice == "Data Visualization":
      
         
         if F1score:
-            st.altair_chart(lastmodel.f1,  use_container_width=False) 
+            column1.altair_chart(lastmodel.f1,  use_container_width=False) 
             
         if Accuracy:
-            st.altair_chart(lastmodel.acc,  use_container_width=False) 
+            column2.altair_chart(lastmodel.acc,  use_container_width=False) 
             
         if Precision:
-            st.altair_chart(lastmodel.pre,   use_container_width=False) 
+            column3.altair_chart(lastmodel.pre,   use_container_width=False) 
             
         if Recall:
-            st.altair_chart(lastmodel.recall,  use_container_width=False) 
+            column4.altair_chart(lastmodel.recall,  use_container_width=False) 
