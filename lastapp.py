@@ -31,7 +31,7 @@ if choice == "Home": #Home
     
     user_review = st.text_input('Enter The Comment You Want To Test')
     
-    if user_review == False:
+    if len(user_review) == 0:
         st.waring('Please Enter A Comment.')
       
     if st.button("Analyze"):
