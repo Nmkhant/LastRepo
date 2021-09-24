@@ -60,7 +60,7 @@ elif choice == "Data Visualization":
     
     visualization_menu = ["Model Comparison" , "20 Most Common Positive-Hashtags Words", "20 Most Common Negative-Hashtags Words",]
     
-    choice1 = st.selectbox("Model Comparison" , visualization_menu )
+    choice1 = st.selectbox("Data Vasualization Menu" , visualization_menu )
    
     if choice1 == "20 Most Common Positive-Hashtags Words":
         st.altair_chart(lastmodel.a, use_container_width=True) 
