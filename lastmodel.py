@@ -196,13 +196,13 @@ df_recall  = pd.DataFrame({
     })
 
 f1 = alt.Chart(df_f1score).mark_bar(opacity=1).encode(
-y='F1score', x='Model').properties(height=350,width=200)
+y='F1score', x='Model').properties(height=450,width=200)
 
 acc = alt.Chart(df_accuracy).mark_bar(opacity=1).encode(
-y='Accuracy', x='Model').properties(height=350,width=200)
+y='Accuracy', x='Model').properties(height=450,width=200)
 
 pre = alt.Chart(df_precision).mark_bar(opacity=1).encode(
-y='Precision Macro Score', x='Model').properties(height=350,width=200)
+y='Precision Macro Score', x='Model').properties(height=450,width=200)
 
 recall = alt.Chart(df_recall).mark_bar(opacity=1).encode(
-y='Recall Score', x='Model').properties(height=350,width=200)
+y='Recall Score', x='Model').properties(height=450,width=200)
