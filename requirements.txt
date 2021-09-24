@@ -86,7 +86,7 @@ pyrsistent==0.18.0
 
 
 pywin32-ctypes==0.2.0
-pywinpty==1.1.4
+
 PyYAML==5.4.1
 pyzmq==22.3.0
 QDarkStyle==2.8.1
