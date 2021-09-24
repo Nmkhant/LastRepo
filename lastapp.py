@@ -68,3 +68,31 @@ elif choice == "Data Visualization":
     if choice1 == "20 Most Common Negative-Hashtags Words":
        st.altair_chart(lastmodel.b, use_container_width=True)
 
+    if choice1 == "Model Comparison":
+        
+        column1 , column2 , column3 , column4= st.columns([1, 1.5, 1.5, 1])
+        
+        F1score = column1.button("  F1 Score  ")
+        st.text("")
+        
+        Accuracy = column2.button('Accuracy Score')
+        st.text("")
+       
+        Precision = column3.button('Precision Score')
+        st.text("")
+       
+        Recall = column4.button('Recall Score')
+        st.text("")
+     
+        
+        if F1score:
+            st.altair_chart(lastmodel.f1,  use_container_width=False) 
+            
+        if Accuracy:
+            st.altair_chart(lastmodel.acc,  use_container_width=False) 
+            
+        if Precision:
+            st.altair_chart(lastmodel.pre,   use_container_width=False) 
+            
+        if Recall:
+            st.altair_chart(lastmodel.recall,  use_container_width=False) 
