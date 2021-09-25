@@ -56,7 +56,7 @@ elif choice == "About Us":
     col2.write("<p style = 'text-align: justify; font-size:110%; color:#1DA1F2'>I am Mg Nyi Min Khant. I am the UI designer of this software.</p>", unsafe_allow_html = True)
     
     col3.image('tyn.png', width = 200)  
-    col3.write("<p style = 'text-align: justify; font-size:110%; color:#1DA1F2'>I am Ma Thwet Yin Nyein.I am responsible for data preparation and preprocessing in this project.</p>", unsafe_allow_html = True)
+    col3.write("<p style = 'text-align: justify; font-size:110%; color:#1DA1F2'>I am Ma Thwet Yin Nyein.I am responsible for data preparation and data preprocessing in this project.</p>", unsafe_allow_html = True)
 
 
 elif choice == "Data Visualization":
