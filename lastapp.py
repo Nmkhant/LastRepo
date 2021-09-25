@@ -53,7 +53,7 @@ elif choice == "About Us":
     
     col1 , col2 , col3 = st.columns(3)
     col1.image('hhm.png', width = 200)
-    col.write("<p style = 'text-align: justify; font-size:110%; color:#1DA1F2'>I am Ma Htet Htet Mon.I am responsible for the backend system of this project.</p>", unsafe_allow_html = True)
+    col1.write("<p style = 'text-align: justify; font-size:110%; color:#1DA1F2'>I am Ma Htet Htet Mon.I am responsible for the backend system of this project.</p>", unsafe_allow_html = True)
     
     col2.image('nmk.png', width = 200)
     col2.write("<p style = 'text-align: justify; font-size:110%; color:#1DA1F2'>I am Mg Nyi Min Khant. I am the UI designer of this software.</p>", unsafe_allow_html = True)
