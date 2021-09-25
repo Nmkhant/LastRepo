@@ -36,11 +36,11 @@ if choice == "Home": #Home
             prediction = lastmodel.testing(user_review)
             if prediction == 0:
                 st.success('Your comment is a positive comment. Racism and Sexism should not be in the world.You are great!')
-                st.text("")
+                
                 st.image('smile.png' , width = 50)
             elif prediction == 1:
                 st.error('Your comment is a negative comment. The day you stop blaming others is the day you begin to discover who you truely are.')
-                st.text("")
+                
                 st.image('sad.png' , width = 50)
         elif  len(user_review) == 0:
             st.warning('Please Enter A Comment.')
