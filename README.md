@@ -10,5 +10,6 @@ We trained the Dataset with **Three Algorithms, Multinomial Naive Bayes, XGBClas
 
 **In this application, we created a UI that color blind people can use.**
 
-![Image of image1](https://octodex.github.com/images/yaktocat.png)
-
+![Image of image1](https://github.com/Nmkhant/LastRepo/blob/main/image1.JPG)
+![Image of image2](https://github.com/Nmkhant/LastRepo/blob/main/image2.JPG)
+![Image of image3](https://github.com/Nmkhant/LastRepo/blob/main/image3.JPG)
